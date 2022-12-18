@@ -8,15 +8,31 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Document</title>
 </head>
-<body>
-    <div id="app">
-        <h1>Dischi</h1>
-        <ul>
-            <li v-for="disco in dischi">
-                {{disco.title}}
-            </li>
-        </ul>
-    </div>
+<body style="background-color: #1d2d3c;">
+    
+
+        <div id="app">
+            <header>
+                <div class="header-container">
+                    
+                </div>
+            </header>
+
+
+        <main>
+            <ul>
+                <div class="container" style="display:flex; width: 1200px; flex-wrap: wrap; margin: auto;">
+                    <li v-for="disco in dischi" style="display: flex; flex-direction: column; justify-content: center; text-align: center; margin-left: 50px; margin-bottom: 50px; flex-wrap: wrap; background-color: #112030; padding: 15px; color: white;">
+                        <img v-bind:src="disco.poster" alt="" style="width:260px;height:310px;">
+                        <h3>{{disco.title}}</h3>
+                        <small>{{disco.author}}</small>
+                        <p>{{disco.year}}</p>
+                    </li>
+                </div>
+            </ul>
+
+        </main>
+        </div>
 
 
     <script src="js/main.js"></script>
